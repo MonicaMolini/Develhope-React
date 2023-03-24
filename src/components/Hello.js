@@ -1,12 +1,12 @@
 import React from "react"
 
 
-function sayHello(name){
-    return <h1>Hello, {name}!</h1>
+function sum(a, b){
+    return <h2>The sum is: {a +b}!</h2>
 } 
 
-export default class Hello extends React.Component{
+export default class Sum extends React.Component{
     render(){
-        return sayHello("Nino")
+        return sum(2, 9)
     }
 }
