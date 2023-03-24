@@ -1,10 +1,12 @@
 import React from "react"
 
-const hello = <h1>Hello, World!</h1>
+
+function sayHello(name){
+    return <h1>Hello, {name}!</h1>
+} 
 
 export default class Hello extends React.Component{
     render(){
-        return hello
+        return sayHello("Nino")
     }
-
 }
