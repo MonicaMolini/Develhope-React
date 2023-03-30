@@ -4,13 +4,13 @@ export class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: this.props.initialValue,
     };
     setInterval(() => {
       this.setState((state) => {
-        return { count: state.count + 1 };
+        return { count: state.count + this.props.incrementBy };
       });
-    }, 1000);
+    }, this.props.timeout);
   }
   render() {
     return <h1>Counter: {this.state.count}</h1>;
