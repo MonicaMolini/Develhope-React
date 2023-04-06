@@ -1,15 +1,15 @@
-import React from "react";
-import { Counter } from "./Counter";
+import React, { Component } from "react";
+import ClickCounter from "./ClickCounter";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <div>
         <Hello />
-        <Welcome name ="John" age={29}/>
-        <Counter initialValue={0} incrementBy={4} timeout={2000} />        
+        <Welcome name="John" age={30} />               
+        <ClickCounter />
       </div>
     );
   }
