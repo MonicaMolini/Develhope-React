@@ -16,7 +16,7 @@ export default class InteractiveWelcome extends React.Component {
     return (
       <div>
         <input name="name" value={this.state.name} onChange={this.handleInputChange} placeholder="What's your name?"/>
-        {this.state.name && <Welcome name={this.state.name} age="29" />}
+        {this.state.name && <Welcome name={this.state.name}/>}
       </div>
     );
   }
