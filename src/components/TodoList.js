@@ -14,7 +14,8 @@ export class TodoList extends React.Component{
 
     handleClick = () => {
         this.setState({
-            Todo: [...this.state.Todo, this.state.AddTodo]
+            Todo: [...this.state.Todo, this.state.AddTodo],
+            AddTodo: ""
         })
     }
 
@@ -27,7 +28,7 @@ export class TodoList extends React.Component{
                     }
                 </ul>
                 
-                <input onChange={this.handleChange} name="Todo"></input>
+                <input onChange={this.handleChange} value={this.state.AddTodo} name="Todo"></input>
                 <button disabled = {!this.state.AddTodo} onClick={this.handleClick}>Add</button>
             </div>
         )
