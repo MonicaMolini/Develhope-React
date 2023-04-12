@@ -2,7 +2,7 @@ import React from "react";
 
 export class TodoList extends React.Component{
     state = {
-        Todo: ["Fare la spesa", "Pulire","Andare alla Posta", "Riunione"],
+        Todo: [],
         AddTodo: ""
     }
 
@@ -18,6 +18,12 @@ export class TodoList extends React.Component{
             AddTodo: ""
         })
     }
+    handleClearAll = () =>{
+        this.setState({
+            Todo: [],
+            todo: ""
+        })
+    }
 
     render(){
         return (
@@ -30,6 +36,7 @@ export class TodoList extends React.Component{
                 
                 <input onChange={this.handleChange} value={this.state.AddTodo} name="Todo"></input>
                 <button disabled = {!this.state.AddTodo} onClick={this.handleClick}>Add</button>
+                <button onClick={this.handleClearAll}>Clear All</button>
             </div>
         )
     }
