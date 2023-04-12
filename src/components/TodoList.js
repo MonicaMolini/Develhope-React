@@ -24,13 +24,18 @@ export class TodoList extends React.Component{
             todo: ""
         })
     }
+    handleRemove = (event) =>{
+        this.setState({
+            Todo: this.state.Todo.filter(el => el !== event.target.value)
+        })
+    }
 
     render(){
         return (
             <div>
                 <ul>
                     {
-                        this.state.Todo.map((el) => <li>{el}</li>)
+                        this.state.Todo.map((el) => <li key={el}>{el} <button value={el} onClick={this.handleRemove}>Remove</button></li>)
                     }
                 </ul>
                 
