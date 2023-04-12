@@ -1,4 +1,5 @@
 import React from "react";
+import { Render } from "./Render";
 
 export class TodoList extends React.Component{
     state = {
@@ -32,13 +33,8 @@ export class TodoList extends React.Component{
 
     render(){
         return (
-            <div>
-                <ul>
-                    {
-                        this.state.Todo.map((el) => <li key={el}>{el} <button value={el} onClick={this.handleRemove}>Remove</button></li>)
-                    }
-                </ul>
-                
+            <div>                
+                <Render state={this.state} handleRemove={this.handleRemove}></Render>                
                 <input onChange={this.handleChange} value={this.state.AddTodo} name="Todo"></input>
                 <button disabled = {!this.state.AddTodo} onClick={this.handleClick}>Add</button>
                 <button onClick={this.handleClearAll}>Clear All</button>
