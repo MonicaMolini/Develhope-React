@@ -5,7 +5,7 @@ export default class App extends Component {
   render() {
     return (
       <div>        
-        <Login onLog={this.onlogin}></Login>
+        <Login onLogin={this.onlogin}></Login>
         
       </div>
     );
