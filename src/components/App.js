@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export default class App extends Component {
   state = {
-    language: "en",
+    language: "En",
 };
 
 handleLanguageChange = (event) =>{
@@ -16,12 +17,14 @@ render() {
     return (
         <div>
             <select value={this.state.language} onChange={this.handleLanguageChange}>
-                <option value="en">En</option>
-                <option value="it">It</option>
-                <option value="es">Es</option>
-                <option value="de">De</option>
+                <option value="En">En</option>
+                <option value="It">It</option>
+                <option value="Es">Es</option>
+                <option value="De">De</option>
             </select>
-            <LanguageContext.Provider value={this.state.language}/>  
+            <LanguageContext.Provider value={this.state.language}>  
+            <DisplayLanguage />
+            </LanguageContext.Provider>
                         
         </div>
     );
