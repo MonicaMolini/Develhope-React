@@ -5,8 +5,7 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>Welcome, {this.props.name || "Stranger"}!</p> 
-        <Age age = {this.props.age } />
+        <p>Welcome, {this.props.name || "Stranger"}!</p>         
       </div>
     );
   }
