@@ -14,7 +14,7 @@ export class Login extends React.Component{
     }
 
     handleButton = ()=> {
-        this.props.onLog(this.state)
+        this.props.onLogin(this.state)
     }
 
     render(){
@@ -22,7 +22,7 @@ export class Login extends React.Component{
             <div>
                 <input name="username" onChange={this.handleChange} placeholder="Username"></input>
                 <input name="password" type="password" onChange={this.handleChange} placeholder="Password"></input>
-                <button onClick={this.handleButton} disabled = {!this.state.username || !this.state.password}>Login</button>
+                <button type="submit" onClick={this.handleButton} disabled = {!this.state.username || !this.state.password}>Login</button>
             </div>
         )
     }
