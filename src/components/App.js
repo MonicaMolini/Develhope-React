@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import { TodoList } from "./TodoList";
 
 export default class App extends Component {
-  onLogin = (state) => {
-    console.log(state);
-  };
-  
-  render() {
+   render() {
     return (
       <div>        
-        <UncontrolledLogin onLogin={this.onlogin} />
+        <TodoList/>
         
       </div>
     );
