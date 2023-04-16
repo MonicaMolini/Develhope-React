@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./Counter";
+import GithubUser from "./GithubUser";
 
 export default function App() {   
     return (
         <div>
-         <Counter/>                 
+         <GithubUser username="MonicaMolini"/>             
         </div>
     );
 }
