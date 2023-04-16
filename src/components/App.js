@@ -1,10 +1,10 @@
 import React from "react";
-import { ClickCounter } from "./ClickCounter";
+import { Login } from "./Login";
 
 export default function App() {
     return (
         <div>
-         <ClickCounter/>                     
+         <Login/>                   
         </div>
     );
 }
