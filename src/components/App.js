@@ -1,10 +1,10 @@
 import React from "react";
-import Form from "./Form";
+import GithubUser from "./GithubUser";
 
 export default function App() {   
     return (
-        <div>          
-         <Form />               
+        <div>
+         <GithubUser username="MonicaMolini"/>                  
         </div>
     );
 }
