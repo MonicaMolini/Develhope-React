@@ -1,28 +1,8 @@
-import { useEffect, useState } from "react";
+import useSWR from "swr";
+const fetcher = (url) => fetch(url).then(result => result.json())
+
 
 export default function useGithubUser(username) {
-  const [data, setData] = useState();
-  const [error, setError] = useState();
-  const [loading, setLoading] = useState();
-
-  async function getGitUser(){
-    setError(null)
-    setLoading(true)
-    try{
-        const response = await  fetch(`https://api.github.com/users/${username}`)
-        const json = await response.json()
-        setData(json)
-    }catch(error){
-        setError(error)
-        setData(null)
-    }finally{
-        setLoading(false)
-    }
-}
-useEffect(() => {
-  getGitUser(username);
-}, [username]);
-
-return { data, error, loading};
-
+  const {data, error} = useSWR(`https://api.github.com/users/${username}`, fetcher);
+  return {data, error};
 }
