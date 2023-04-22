@@ -1,10 +1,13 @@
 import React from "react";
-import GithubUser from "./GithubUser";
+import CarDetails from "./CarDetails";
 
-export default function App() {   
-    return (
+export default function App() {      
+    
+      return (
         <div>
-         <GithubUser username="MonicaMolini"/>                  
+          <h1>Car details:</h1>
+          <CarDetails cardetails={{ model: "Ford", year: 2003, color: "light grey" }}/>
+          
         </div>
-    );
-}
+      );
+    } 
