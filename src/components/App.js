@@ -1,27 +1,18 @@
 import React from "react";
-import FilteredList from "./FilteredList";
+import { Link, Route, Routes } from "react-router-dom";
+import Counter from "./Counter";
 
-export default function App() {  
-  const peopleList = [
-    { id: 0, name: "Monica", age: 29 },
-    { id: 1, name: "Antonio", age: 33 },
-    { id: 2, name: "Claudia", age: 34 },
-    { id: 3, name: "Mirella", age: 61 },
-    { id: 4, name: "Mariasole", age: 17 },
-    { id: 5, name: "Mario", age: 55 },
-    { id: 6, name: "Armando", age: 12 },
-    { id: 7, name: "Michele", age: 24 },
-    { id: 8, name: "Ludovica", age: 14 },
-    { id: 9, name: "Carmen", age: 11 },
-    { id: 10, name: "Paolo", age: 41 },
-    { id: 11, name: "Giusy", age: 10 },
-    { id: 12, name: "Samuel", age: 6 },
-  ];
 
+export default function App() {
   return (
-    <div>      
-      <FilteredList peoples={peopleList} />
+    <div>
+      <Link to="/">Home</Link> - <Link to="/counter">Counter</Link>
+      <Routes>
+        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
     </div>
+
   );
 }
 
