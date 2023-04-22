@@ -13,6 +13,7 @@ export default function App() {
         <Route path="/" element={<h1>Home Page</h1>} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/users" element={<GithubUserList />}>
+          <Route index element={<h3>Add a user and select it</h3>} />
           <Route path=":username" element={<ShowGitHubUser />} />
         </Route>
         <Route path="*" element={
