@@ -12,6 +12,13 @@ export default function App() {
         <Route path="/" element={<h1>Home Page</h1>} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/users/:username" element={<ShowGitHubUser />} />
+        <Route path="*" element={
+          <>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "50px" }}>
+              <img style={{ width: "50px" }} src="https://www.svgrepo.com/show/144183/sad.svg" />
+              <h3>Sorry, it seems the page doesn't exist</h3> </div>
+          </>
+        } />
       </Routes>
     </div>
 
